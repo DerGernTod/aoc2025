@@ -1,9 +1,10 @@
 use std::env;
 
 mod day_01;
+mod day_02;
 
 fn main() -> Result<(), &'static str> {
-    let day_fns = [day_01::day_01];
+    let day_fns = [day_01::day_01, day_02::day_02];
 
     if let Some(day_str) = env::args().skip(1).next() {
         let day: usize = day_str.parse().map_err(|_| {
